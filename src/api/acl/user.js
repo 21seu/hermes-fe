@@ -98,13 +98,13 @@ export function getRoles(adminId) {
 给某个用户分配角色
 roleId的结构: 字符串, 'rId1,rId2,rId3'
 */
-export function assignRoles(adminId, roleId) {
+export function assignRoles(adminId, roleIds) {
   return request({
     url: `${api_name}/doAssign`,
     method: 'post',
     params: {
       adminId,
-      roleId
+      roleIds
     }
   })
 }
